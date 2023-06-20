@@ -1,0 +1,8 @@
+.mainContainer {
+  display: flex;
+}
+
+.sectionContainer {
+  flex-basis: 0;
+  flex-grow: 1;
+}
