@@ -18,13 +18,13 @@ const routes = [
 
 const Nav = () => (
   <>
-    <header>
-      <img src={Logo} />
-      <h1>Space Traveer's Hub</h1>
-      <nav>
-        <ul>
+    <header className="mainHeader">
+      <img className="appLogo" src={Logo} />
+      <h1 className="appTitle">Space Traveer's Hub</h1>
+      <nav className="navBar">
+        <ul className="navList">
           {routes.map((route) => (
-            <li>
+            <li className="navListItem">
               <NavLink to={route.route}>{route.label}</NavLink>
             </li>
           ))}
