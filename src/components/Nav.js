@@ -19,12 +19,12 @@ const routes = [
 const Nav = () => (
   <>
     <header className="mainHeader">
-      <img className="appLogo" src={Logo} />
-      <h1 className="appTitle">Space Traveer's Hub</h1>
+      <img className="appLogo" src={Logo} alt="App logo" />
+      <h1 className="appTitle">Space Traveer&apos;s Hub</h1>
       <nav className="navBar">
         <ul className="navList">
           {routes.map((route) => (
-            <li className="navListItem">
+            <li className="navListItem" key={route.route}>
               <NavLink to={route.route}>{route.label}</NavLink>
             </li>
           ))}
@@ -37,4 +37,4 @@ const Nav = () => (
   </>
 );
 
-export default Nav
+export default Nav;
