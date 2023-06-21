@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchMissions, handleMission } from '../redux/missions/missionsSlice';
+import ReserveBtn from './ReserveBtn';
 // import Badge from './Badge';
 // import ReserveBtn from './ReserveBtn';
 
@@ -26,9 +27,15 @@ const Missions = () => {
           <tr key={mission.id}>
             <td>{mission.name}</td>
             <td>{mission.description}</td>
-            <button type="button" onClick={() => dispatch(handleMission(mission.id))}>{mission.reserved ? 'Leave Mission' : 'Join Mission'}</button>
-            {/* <td><Badge /></td>
-            <td><ReserveBtn /></td> */}
+            {/* <td><Badge /></td> */}
+            <td>
+              <ReserveBtn
+                id={mission.id}
+                reserved={mission.reserved}
+                handleReservation={handleMission}
+                label={mission.reserved ? 'Leave Mission' : 'Join Mission'}
+              />
+            </td>
           </tr>
         ))}
       </table>
