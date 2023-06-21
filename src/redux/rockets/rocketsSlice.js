@@ -30,8 +30,13 @@ const rocketsSlice = createSlice({
       }))
       .addCase(fetchRockets.fulfilled, (state, { payload }) => ({
         ...state,
+        rockets: payload.map((rocket) => ({
+          id: rocket.id,
+          name: rocket.name,
+          description: rocket.description,
+          img: rocket.flickr_images[0],
+        })),
         loading: false,
-        rockets: payload,
       }))
       .addCase(fetchRockets.rejected, (state, { payload }) => ({
         ...state,
