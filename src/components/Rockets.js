@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchRockets } from '../redux/rockets/rocketsSlice';
 import style from '../styles/rockets.module.css';
 import ReserveBtn from './ReserveBtn';
+import Badge from './Badge';
 
 const Rockets = () => {
   const dispatch = useDispatch();
@@ -12,7 +13,6 @@ const Rockets = () => {
     if (rockets.length) return;
     dispatch(fetchRockets());
   }, [rockets, dispatch]);
-  console.log(rockets);
 
   return (
     <>
@@ -23,7 +23,7 @@ const Rockets = () => {
           <article key={rocket.id} className={style.article}>
             <img className={style.img} src={rocket.img} alt={rocket.name} />
             <h1>{rocket.name}</h1>
-            <span>{rocket.reserved && 'Reserved'}</span>
+            <Badge reserved={rocket.reserved} />
             <p>{rocket.description}</p>
             <ReserveBtn id={rocket.id} reserved={rocket.reserved} />
           </article>
