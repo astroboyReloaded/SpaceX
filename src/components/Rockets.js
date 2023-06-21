@@ -1,19 +1,18 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchRockets, reserveRocket } from '../redux/rockets/rocketsSlice';
+import { fetchRockets } from '../redux/rockets/rocketsSlice';
 import style from '../styles/rockets.module.css';
+import ReserveBtn from './ReserveBtn';
 
 const Rockets = () => {
   const dispatch = useDispatch();
   const { rockets, loading, error } = useSelector((state) => state.rockets);
 
   useEffect(() => {
+    if (rockets.length) return;
     dispatch(fetchRockets());
-  }, [rockets.length, dispatch]);
-
-  // const handleReserve = (id) => {
-  //   dispatch(reserveRocket(id));
-  // };
+  }, [rockets, dispatch]);
+  console.log(rockets);
 
   return (
     <>
@@ -26,7 +25,7 @@ const Rockets = () => {
             <h1>{rocket.name}</h1>
             <span>{rocket.reserved && 'Reserved'}</span>
             <p>{rocket.description}</p>
-            <button type="button" onClick={() => dispatch(reserveRocket(rocket.id))}>{rocket.reserved ? 'Cancel Reservation' : 'Reserve Rocket'}</button>
+            <ReserveBtn id={rocket.id} reserved={rocket.reserved} />
           </article>
         ))}
         {error && <span>error</span>}
