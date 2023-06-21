@@ -1,0 +1,10 @@
+.article {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 18vh;
+}
+
+.img {
+  height: 90px;
+}
