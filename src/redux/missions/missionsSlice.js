@@ -30,8 +30,8 @@ const missionsSlice = createSlice({
       .addCase(fetchMissions.fulfilled, (state, { payload }) => ({
         ...state,
         missions: payload.map((mission) => ({
-          id: mission.id,
-          name: mission.name,
+          id: mission.mission_id,
+          name: mission.mission_name,
           description: mission.description,
         })),
         loading: false,
