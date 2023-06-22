@@ -1,8 +1,6 @@
 .article {
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  max-height: 30vh;
+  min-height: 30vh;
   margin-bottom: 1.2rem;
 }
 
@@ -14,8 +12,4 @@
 
 .name {
   margin: 0;
-}
-
-.description {
-  width: 81%;
 }

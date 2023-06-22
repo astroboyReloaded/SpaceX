@@ -8,6 +8,11 @@ const MyMissions = () => {
   return (
     <section className={style.sectionContainer}>
       <h1>My Missions</h1>
+      {joinedMissions.length < 1 && (
+        <span>
+          You have not joined any missions yet
+        </span>
+      )}
       {joinedMissions.map((mission) => (
         <article className={style.article} key={mission.id}>
           <h1>{mission.name}</h1>
