@@ -7,7 +7,6 @@ import ReserveBtn from './ReserveBtn';
 const Missions = () => {
   const dispatch = useDispatch();
   const { missions } = useSelector((state) => state.missions);
-  console.log(missions);
 
   useEffect(() => {
     if (missions.length) return;
