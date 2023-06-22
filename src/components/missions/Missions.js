@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchMissions, handleMission } from '../../redux/missions/missionsSlice';
+import { fetchMissions } from '../../redux/missions/missionsSlice';
+import JoinBtn from './JoinBtn';
+import style from '../../styles/missions.module.css';
 
 const Missions = () => {
   const dispatch = useDispatch();
-  const { missions } = useSelector((state) => state.missions);
+  const { missions, loading, error } = useSelector((state) => state.missions);
 
   useEffect(() => {
     if (missions.length) return;
@@ -13,28 +15,30 @@ const Missions = () => {
 
   return (
     <>
-      <table>
-        <tr>
-          <th>Mission</th>
-          <th>description</th>
-          <th>Status</th>
-        </tr>
-        {missions.map((mission) => (
-          <tr key={mission.id}>
-            <td>{mission.name}</td>
-            <td>{mission.description}</td>
-            <td>badge</td>
-            <td>
-              <JoinBtn
-                id={mission.id}
-                reserved={mission.joined}
-                handleReservation={handleMission}
-                label={mission.joined ? 'Leave Mission' : 'Join Mission'}
-              />
-            </td>
+      {loading && <span>loading...</span>}
+      {missions && (
+        <table className={style.table}>
+          <tr className={style.tableRow}>
+            <th className={style.tableData}>Mission</th>
+            <th className={style.tableData}>Description</th>
+            <th className={style.tableData}>Status</th>
           </tr>
-        ))}
-      </table>
+          {missions.map((mission) => (
+            <tr className={style.tableRow} key={mission.id}>
+              <td className={`${style.tableData} ${style.name}`}>{mission.name}</td>
+              <td className={style.tableData}>{mission.description}</td>
+              <td className={style.tableData}>badge</td>
+              <td className={style.tableData}>
+                <JoinBtn
+                  id={mission.id}
+                  joined={mission.joined}
+                />
+              </td>
+            </tr>
+          ))}
+        </table>
+      )}
+      {error && <span>error</span>}
     </>
   );
 };
