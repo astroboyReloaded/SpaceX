@@ -7,7 +7,7 @@ const MyRockets = () => {
 
   return (
     <section className={style.sectionContainer}>
-      <h1>MyRockets</h1>
+      <h1>MyItems</h1>
       {rockets.map((rocket) => rocket.reserved && (
         <article className={style.article} key={rocket.id}>
           <h1>{rocket.name}</h1>
