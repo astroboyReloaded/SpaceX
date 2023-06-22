@@ -1,9 +1,9 @@
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import Nav from './components/Nav';
-import Rockets from './components/Rockets';
+import Rockets from './components/rockets/Rockets';
 import MyProfile from './components/myProfile/MyProfile';
-import Missions from './components/Missions';
+import Missions from './components/missions/Missions';
 
 const App = () => (
   <Routes>

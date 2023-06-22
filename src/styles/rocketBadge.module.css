@@ -1,0 +1,12 @@
+.rocketBadge {
+  border-radius: 3px;
+  padding: 0 0.3rem 0.12rem 0.3rem;
+  background-color: rgb(19, 175, 175);
+  color: white;
+  margin-right: 0.9rem;
+  display: none;
+}
+
+.showBadge {
+  display: inline;
+}
