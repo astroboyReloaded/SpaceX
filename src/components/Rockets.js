@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchRockets, handleRocket } from '../redux/rockets/rocketsSlice';
+import { fetchRockets } from '../redux/rockets/rocketsSlice';
 import style from '../styles/rockets.module.css';
 import ReserveBtn from './ReserveBtn';
 import RocketBadge from './RocketBadge';
@@ -28,8 +28,6 @@ const Rockets = () => {
           <ReserveBtn
             id={rocket.id}
             reserved={rocket.reserved}
-            handleReservation={handleRocket}
-            label={rocket.reserved ? 'Cancel Reservation' : 'Reserve Rocket'}
           />
         </article>
       ))}

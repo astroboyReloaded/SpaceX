@@ -1,0 +1,14 @@
+.reserveButton {
+  width: fit-content;
+  border: none;
+  border-radius: 3px;
+  padding: 0.6rem;
+  background-color: rgb(35, 135, 250);
+  color: white;
+}
+
+.cancellButton {
+  border: 1px solid gray;
+  background-color: white;
+  color: black;
+}

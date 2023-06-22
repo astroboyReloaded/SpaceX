@@ -1,19 +1,21 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
+import { handleRocket } from '../redux/rockets/rocketsSlice';
+import style from '../styles/reserveBtn.module.css';
 
 const ReserveBtn = ({
   id,
-  handleReservation,
-  label,
+  reserved,
 }) => {
   const dispatch = useDispatch();
 
   return (
     <button
       type="button"
-      onClick={() => dispatch(handleReservation(id))}
+      onClick={() => dispatch(handleRocket(id))}
+      className={`${style.reserveButton} ${reserved && style.cancellButton}`}
     >
-      {label}
+      {reserved ? 'Cancel Reservation' : 'Reserve Rocket'}
     </button>
   );
 };
@@ -22,6 +24,5 @@ export default ReserveBtn;
 
 ReserveBtn.propTypes = {
   id: PropTypes.string.isRequired,
-  handleReservation: PropTypes.func.isRequired,
-  label: PropTypes.string.isRequired,
+  reserved: PropTypes.bool.isRequired,
 };
