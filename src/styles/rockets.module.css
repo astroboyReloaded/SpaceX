@@ -2,9 +2,16 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  max-height: 18vh;
+  max-height: 30vh;
+  margin-bottom: 1.2rem;
 }
 
 .img {
-  height: 90px;
+  height: 180px;
+  width: 210px;
+  margin-right: 1.8rem;
+}
+
+.name {
+  margin: 0;
 }
