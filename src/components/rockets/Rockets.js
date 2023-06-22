@@ -21,7 +21,7 @@ const Rockets = () => {
         <article key={rocket.id} className={style.article}>
           <img className={style.img} src={rocket.img} alt={rocket.name} />
           <h1 className={style.name}>{rocket.name}</h1>
-          <p>
+          <p className={style.description}>
             <RocketBadge reserved={rocket.reserved} />
             {rocket.description}
           </p>
