@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import style from '../styles/rocketBadge.module.css';
+import style from '../../styles/rocketBadge.module.css';
 
 const RocketBadge = ({ reserved }) => (
   <span

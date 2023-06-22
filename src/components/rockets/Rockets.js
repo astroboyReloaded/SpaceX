@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchRockets } from '../redux/rockets/rocketsSlice';
-import style from '../styles/rockets.module.css';
+import { fetchRockets } from '../../redux/rockets/rocketsSlice';
+import style from '../../styles/rockets.module.css';
 import ReserveBtn from './ReserveBtn';
 import RocketBadge from './RocketBadge';
 

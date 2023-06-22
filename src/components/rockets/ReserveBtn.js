@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { handleRocket } from '../redux/rockets/rocketsSlice';
-import style from '../styles/reserveBtn.module.css';
+import { handleRocket } from '../../redux/rockets/rocketsSlice';
+import style from '../../styles/reserveBtn.module.css';
 
 const ReserveBtn = ({
   id,
