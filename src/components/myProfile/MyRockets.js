@@ -3,7 +3,6 @@ import style from '../../styles/myProfile.module.css';
 
 const MyRockets = () => {
   const { rockets } = useSelector((state) => state.rockets);
-  console.log(rockets);
 
   return (
     <section className={style.sectionContainer}>
