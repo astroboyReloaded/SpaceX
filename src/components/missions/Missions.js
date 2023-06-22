@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchMissions } from '../../redux/missions/missionsSlice';
+import MissionBadge from './MissionBadge';
 import JoinBtn from './JoinBtn';
 import style from '../../styles/missions.module.css';
 
@@ -27,7 +28,9 @@ const Missions = () => {
             <tr className={style.tableRow} key={mission.id}>
               <td className={`${style.tableData} ${style.name}`}>{mission.name}</td>
               <td className={style.tableData}>{mission.description}</td>
-              <td className={style.tableData}>badge</td>
+              <td className={style.tableData}>
+                <MissionBadge joined={mission.joined} />
+              </td>
               <td className={style.tableData}>
                 <JoinBtn
                   id={mission.id}
