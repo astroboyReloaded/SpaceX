@@ -8,6 +8,11 @@ const MyRockets = () => {
   return (
     <section className={style.sectionContainer}>
       <h1>MyItems</h1>
+      {reservedRockets.length < 1 && (
+        <span>
+          You have not reserved any rockets yet
+        </span>
+      )}
       {reservedRockets.map((rocket) => (
         <article className={style.article} key={rocket.id}>
           <h1>{rocket.name}</h1>

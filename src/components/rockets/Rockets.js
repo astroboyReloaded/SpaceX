@@ -20,15 +20,17 @@ const Rockets = () => {
       {rockets.map((rocket) => (
         <article key={rocket.id} className={style.article}>
           <img className={style.img} src={rocket.img} alt={rocket.name} />
-          <h1 className={style.name}>{rocket.name}</h1>
-          <p>
-            <RocketBadge reserved={rocket.reserved} />
-            {rocket.description}
-          </p>
-          <ReserveBtn
-            id={rocket.id}
-            reserved={rocket.reserved}
-          />
+          <div>
+            <h1 className={style.name}>{rocket.name}</h1>
+            <p>
+              <RocketBadge reserved={rocket.reserved} />
+              {rocket.description}
+            </p>
+            <ReserveBtn
+              id={rocket.id}
+              reserved={rocket.reserved}
+            />
+          </div>
         </article>
       ))}
       {error && <span>error</span>}

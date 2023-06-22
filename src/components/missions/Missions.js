@@ -17,7 +17,7 @@ const Missions = () => {
   return (
     <>
       {loading && <span>loading...</span>}
-      {missions && (
+      {missions.length > 0 && (
         <table className={style.table}>
           <tr className={style.tableRow}>
             <th className={style.tableData}>Mission</th>
