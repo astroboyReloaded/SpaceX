@@ -10,7 +10,7 @@ const JoinBtn = ({ id, joined }) => {
     <button
       type="button"
       onClick={() => dispatch(handleMission(id))}
-      className={style.joinButton}
+      className={`${style.joinButton} ${joined && style.leaveButton}`}
     >
       {joined ? 'Leave Mission' : 'Join Mission'}
     </button>
