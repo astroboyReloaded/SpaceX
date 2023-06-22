@@ -6,3 +6,8 @@
   flex-basis: 0;
   flex-grow: 1;
 }
+
+
+.article {
+  border: 1px solid gray;
+}
