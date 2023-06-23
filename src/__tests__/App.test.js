@@ -1,5 +1,5 @@
 import renderer from 'react-test-renderer';
-import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import Store from '../redux/Store';
 import App from '../App';
