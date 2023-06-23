@@ -1,4 +1,12 @@
+# A Reacr/Redux SPA with SpaceX API
+
 <a name="readme-top"></a>
+
+<div align="center">
+  <img src="src/images/Astroboy-removebg.png" alt="logo" width="120"  height="auto" />
+  <br/>
+  <h3><b>SpaceX</b></h3>
+</div>
 
 <!-- TABLE OF CONTENTS -->
 
