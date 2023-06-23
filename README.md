@@ -139,8 +139,8 @@ npm run build
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- We'll keep you posted as soon as we make new plans
-
+- Mobile-first/responsive design.
+- Preserve data.
 
 <!-- CONTRIBUTING -->
 
