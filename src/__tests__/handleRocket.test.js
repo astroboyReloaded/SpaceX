@@ -1,4 +1,4 @@
-import { handleRocket } from "../redux/rockets/rocketsSlice";
+import { handleRocket } from '../redux/rockets/rocketsSlice';
 
 describe('handleRocket', () => {
   test('should return the correct action', () => {
