@@ -28,7 +28,7 @@
 
 # 📖 Space X <a name="about-project"></a>
 
-> 
+This project is an exercise to effectively integrate Redux actions and createAsyncThunk to React and BrowserRouter to create a SPA with several routes, fetch and render data from different endpoints and select items into a selected list, rendered in a profile. This exercise also includes tests made with Jest and React-Testing-Library.
 
 ## 🛠 Built With <a name="built-with"></a>
 
