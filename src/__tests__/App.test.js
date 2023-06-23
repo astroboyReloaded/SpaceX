@@ -16,4 +16,4 @@ it('Renders App', () => {
       </Router>,
     ).toJSON();
   expect(tree).toMatchSnapshot();
-})
+});
