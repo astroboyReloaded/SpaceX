@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders App 1`] = `
+Array [
+  <header
+    className="mainHeader"
+  >
+    <img
+      alt="App logo"
+      className="appLogo"
+      src="logo.png"
+    />
+    <h1
+      className="appTitle"
+    >
+      Space Traveer's Hub
+    </h1>
+    <nav
+      className="navBar"
+    >
+      <ul
+        className="navList"
+      >
+        <li
+          className="navListItem"
+        >
+          <a
+            aria-current="page"
+            className="active"
+            href="/"
+            onClick={[Function]}
+          >
+            Rockets
+          </a>
+        </li>
+        <li
+          className="navListItem"
+        >
+          <a
+            className=""
+            href="/missions"
+            onClick={[Function]}
+          >
+            Missions
+          </a>
+        </li>
+        <li
+          className="navListItem"
+        >
+          <a
+            className=""
+            href="/profile"
+            onClick={[Function]}
+          >
+            My Profile
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>,
+  <main>
+    <section />
+  </main>,
+]
+`;
