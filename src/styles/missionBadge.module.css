@@ -1,0 +1,16 @@
+.missionBadge {
+  display: flex;
+  width: 120px;
+  border: 1px solid gray;
+  border-radius: 3px;
+  padding: 0 0.3rem 0.12rem 0.3rem;
+  background-color: gray;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.active {
+  border: none;
+  background-color: rgb(19, 175, 175);
+}

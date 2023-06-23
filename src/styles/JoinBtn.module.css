@@ -1,0 +1,12 @@
+.joinButton {
+  width: 108px;
+  border: 1px solid gray;
+  border-radius: 3px;
+  padding-block: 0.3rem;
+  background-color: transparent;
+}
+
+.leaveButton {
+  border-color: red;
+  color: red;
+}

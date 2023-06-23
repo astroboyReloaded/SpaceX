@@ -1,0 +1,17 @@
+.table {
+  border-collapse: collapse;
+  border: 1px solid gray;
+}
+
+.tableRow:nth-child(even) {
+  background-color: rgb(231, 231, 231);
+}
+
+.tableData {
+  border: 1px solid gray;
+  padding: 0.3rem 0.3rem 1rem 0.3rem;
+}
+
+.name {
+  font-weight: 700;
+}
